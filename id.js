@@ -23,23 +23,15 @@ const response = await request.json();
 console.log(response);
 console.log(request);
   
+//GET ID
 
-getAccountId(response);
-}
-
-function getAccountId(response) {
 response = JSON.parse(response);
 const access_token = response.access_token;
 
-const request = await fetch('https://oauth.battle.net/userinfo', {
-headers: {
-'Authorization': 'Bearer ' + access_token
-}});
+const request = await fetch('https://oauth.battle.net/userinfo', { headers: {'Authorization': 'Bearer ' + access_token}});
 
 const response = await request.json();
 console.log(response);
 console.log(request);
-
-}
-
  
+}
