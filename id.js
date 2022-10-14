@@ -28,10 +28,9 @@ console.log(request);
 response = JSON.parse(response);
 const access_token = response.access_token;
 
-const request = await fetch('https://oauth.battle.net/userinfo', { headers: {'Authorization': 'Bearer ' + access_token}});
+const request2 = await fetch('https://oauth.battle.net/userinfo', { headers: {'Authorization': 'Bearer ' + access_token}});
 
-const response = await request.json();
-console.log(response);
-console.log(request);
- 
+const response2 = await request2.json();
+console.log(response2);
+
 }
