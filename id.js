@@ -2,7 +2,7 @@ const queryString = window.location.search;
 const args = new URLSearchParams(queryString);
 const code = args.get('code');
 
-async function getAccessCode() {
+async function getAccessToken() {
 let headers = new Headers();
 await headers.append('Authorization', 'Basic ' + btoa('26a5a476b9064ba990689221ffc120ae' + ":" + 'ijdMG8TGWT4bi4kWWOTuAA9fqhgd8ucF'));
 await headers.append('redirect_uri', 'https://localhost');
