@@ -11,7 +11,7 @@ params.append('scope', 'openid');
 params.append('grant_type', 'authorization_code');
 params.append('code', code);
 
-const accessRequest = fetch("https://oauth.battle.net/token", {
+const accessRequest = await fetch("https://oauth.battle.net/token", {
   body: params,
   headers: {
     Authorization: "Basic MjZhNWE0NzZiOTA2NGJhOTkwNjg5MjIxZmZjMTIwYWU6aWpkTUc4VEdXVDRiaTRrV1dPVHVBQTlmcWhnZDh1Y0Y=",
