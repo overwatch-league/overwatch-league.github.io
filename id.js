@@ -11,8 +11,7 @@ method: 'POST', headers: {
 'redirect_uri': 'https://overwatch-league.github.io/id.html',
 'scope': 'openid',
 'grant_type': 'authorization_code',
-'code': code},
-credentials: 'include'});
+'code': code}});
 
 const response = await accessRequest.json();
 console.log(response);
