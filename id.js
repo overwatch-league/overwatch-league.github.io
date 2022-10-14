@@ -15,6 +15,7 @@ method: 'POST', headers: {
 
 const response = await accessRequest.json();
 console.log(response);
+console.log(accessRequest);
   
 }
  
