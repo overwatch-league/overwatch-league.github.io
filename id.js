@@ -11,18 +11,17 @@ params.append('scope', 'openid');
 params.append('grant_type', 'authorization_code');
 params.append('code', code);
 
-const accessRequest = await fetch("https://oauth.battle.net/token", {
+const request = await fetch("https://oauth.battle.net/token", {
   body: params,
+  method: "POST",
   headers: {
     Authorization: "Basic MjZhNWE0NzZiOTA2NGJhOTkwNjg5MjIxZmZjMTIwYWU6aWpkTUc4VEdXVDRiaTRrV1dPVHVBQTlmcWhnZDh1Y0Y=",
     "Content-Type": "application/x-www-form-urlencoded"
-  },
-  method: "POST"
-});
+  }});
 
-const response = await accessRequest.json();
+const response = await request.json();
 console.log(response);
-console.log(accessRequest);
+console.log(request);
   
 }
  
