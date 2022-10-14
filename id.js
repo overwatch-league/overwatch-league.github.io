@@ -28,7 +28,8 @@ getAccountId(response);
 }
 
 function getAccountId(response) {
-const access_token = response[access_token];
+response = JSON.parse(response);
+const access_token = response.access_token;
 
 const request = await fetch('https://oauth.battle.net/userinfo', {
 headers: {
