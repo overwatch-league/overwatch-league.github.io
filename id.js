@@ -14,7 +14,7 @@ await headers.append('code', code);
   const accessRequest = await fetch('https://oauth.battle.net/token', {
   method: 'POST', headers: headers });
   
-  const response = accessRequest.json();
+  const response = await accessRequest.json();
   
   console.log(response);
   
