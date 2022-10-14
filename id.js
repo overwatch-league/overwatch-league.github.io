@@ -1,6 +1,7 @@
 const queryString = window.location.search;
 const args = new URLSearchParams(queryString);
 const code = args.get('code');
+console.log(code);
 
 async function getAccessToken() {
 let headers = new Headers();
@@ -10,7 +11,7 @@ await headers.append('scope' , 'openid');
 await headers.append('grant_type', 'authorization_code');
 await headers.append('code', code);
   
-  const accessRequest = await fetch(url, {
+  const accessRequest = await fetch('https://oauth.battle.net/token', {
   method: 'POST', headers: headers });
   
   const response = accessRequest.json();
